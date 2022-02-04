@@ -11,7 +11,7 @@
 }
 
 .item{
-  margin: 0px 15px;
+  margin: 0 15px;
   text-align: center;
 }
 
@@ -21,4 +21,27 @@
 
 .items a:hover{
   color:blue;
+}
+.itemdata{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100ch;
+}
+
+.card {
+  padding: 20px;
+  margin: 40px;
+}
+
+.card img{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.card img:hover{
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
 }
