@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CartapiService} from "../../services/cartapi.service";
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  totalItemNumber: number =0;
+  constructor(private cartApi:CartapiService) { }
 
   ngOnInit(): void {
+    this.cartApi.getProductData().subscribe(res=>{
+      this.totalItemNumber = res.length;
+    })
   }
 
 }

@@ -43,7 +43,7 @@
         <p><strong>Price:</strong>{{item.price}}€</p>
         <p>{{item.category}}</p>
 
-        <button class="btn btn-primary">Añadir al carrito</button>
+        <button class="btn btn-primary" (click)="addtoCart(item)">Añadir al carrito</button>
       </div>
     </ng-container>
   </div>
