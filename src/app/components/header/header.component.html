@@ -1,16 +1,16 @@
 <header>
   <div class="navbar navbar-dark bg-primary shadow-sm">
     <div class="navbar-brand align-item-center d-flex">
-      <i style="font-size: 50px;" class="fa fa-truck"></i> &nbsp;
+      <i style="font-size: 50px;" class="fa fa-truck"> </i> &nbsp;
       <strong style="font-size: 30px;">Camionsito</strong>
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Buscar Productos">
       </div>
       <span class="fa fa-search search-icon"></span>
     </div>
-    <button class="btn btn-primary">
+    <button routerLink="cart" class="btn btn-primary">
       <i style="font-size: 50px;" class="fa fa-shopping-cart"></i>
-      <div class="badge bg-danger">3</div>
+      <div class="badge bg-danger">{{totalItemNumber}}</div>
     </button>
   </div>
 </header>
