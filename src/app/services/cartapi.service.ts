@@ -10,7 +10,9 @@ export class CartapiService {
   cartDataList:any =[];
   productList= new BehaviorSubject<any>([]);
   constructor(private http:HttpClient) {}
-    getProductData(){
+
+  //Obtener datos del producto
+  getProductData(){
       return this.productList.asObservable();
     }
     //Determinar los datos del producto
@@ -18,8 +20,8 @@ export class CartapiService {
       this.cartDataList.push(...product);
       this.productList.next(product);
     }
-    // Añadir al acarrito los productos
 
+    // Añadir al carrito los productos
     addToCart(product:any){
       this.cartDataList.push(product);
       this.productList.next(this.cartDataList);
@@ -34,6 +36,7 @@ export class CartapiService {
         grandTotal += a.total;
       })
     }
+
     //Elimina los datos del carrito uno a uno
     removeCartData(product:any){
       this.cartDataList.map((a:any, index:any)=>{
@@ -42,6 +45,7 @@ export class CartapiService {
         }
       })
     }
+
     //Quitar todos los productos del carrito
     removeAllCart(){
       this.cartDataList =[];

@@ -7,7 +7,7 @@ import {CartapiService} from "../../services/cartapi.service";
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  products: any = [];
+  products:any =[];
   allProducts:any =0;
   constructor(private cartApi:CartapiService) { }
 
