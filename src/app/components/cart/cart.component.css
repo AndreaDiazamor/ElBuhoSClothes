@@ -21,3 +21,22 @@
   text-decoration: none;
   margin: 0px 0;
 }
+
+.card-table{
+  display: flex;
+  min-width: none;
+  position: relative;
+  word-wrap: break-word;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: .25rem;
+  flex-direction: column;
+}
+
+.center . btn{
+  margin-top: 25px !important;
+  font-size: 15px !importante;
+  font-weight: 400;
+  padding: 10px 70px;
+  border-radius: 3px !important;
+}
